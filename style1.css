@@ -73,7 +73,7 @@ max-width: 2000px;
 header {
     padding-top: 6em;
     text-align: center;
-    background: linear-gradient(to bottom, #d1e0ff, #ffffff 60%);
+    background: linear-gradient(to bottom, #d1e0ff, #ffffff 80%);
     padding-bottom: 4em;
 }
 
@@ -92,7 +92,7 @@ header {
 }
 
 
-p {
+.sub-caption {
     font-size: 1.4rem;
     color: #333;
     font-weight: 500;
@@ -335,6 +335,10 @@ section {
     color: var(--color-secondary-1);
 }
 
+.premium-img{
+    color: var(--color-secondary-1);
+    font-size: 3.5rem;
+}
 .premium-price {
     font-size: 1.8rem;
     font-weight: bold;
@@ -553,6 +557,9 @@ footer {
     .caption {
         font-size: 3.5rem;
     }
+    .sub-caption {
+        font-size: 1.3rem;
+    }
 
     .header-cta {
         gap: 1.5rem;
@@ -599,6 +606,9 @@ footer {
     }
     .caption {
         font-size: 3rem;
+    }
+    .sub-caption {
+        font-size: 1.25rem;
     }
     p {
         font-size: 1.2rem;
@@ -730,7 +740,9 @@ footer {
     .premium-features img {
         width: 18px;
         }
-    
+        .premium-img{
+            font-size: 3rem;
+        }
         .test-section {
             padding: 6rem 1.5rem;
         }
@@ -783,6 +795,9 @@ font-size: 1.2rem;
     .caption {
         font-size: 2.5rem;
         width: 90%;
+    }
+    .sub-caption {
+        font-size: 1.2rem;
     }
     p {
         font-size: 1.1rem;
@@ -883,6 +898,7 @@ font-size: 1.2rem;
     .premium-features img {
         width: 15px;
         }
+    
         .section-title {
             font-size: 2.2rem;
         }
@@ -942,6 +958,9 @@ font-size: 1.2rem;
     .caption {
         font-size: 2rem;
         width: 95%;
+    }
+    .sub-caption {
+        font-size: 1.1rem;
     }
     p {
         font-size: 1rem;
@@ -1043,7 +1062,9 @@ font-size: 1.2rem;
     .premium-features img {
         width: 10px;
         }
-    
+        .premium-img{
+            font-size: 2.8rem;
+        }
     .single-test{
         transform: translateX(-400px);
         transition: 1s;
