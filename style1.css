@@ -956,11 +956,12 @@ font-size: 1.2rem;
     
     }
     .caption {
-        font-size: 2rem;
+        font-size: 2.2rem;
         width: 95%;
     }
     .sub-caption {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        width: 95%;
     }
     p {
         font-size: 1rem;
@@ -1037,7 +1038,7 @@ font-size: 1.2rem;
         
         padding: 2rem 1rem;
         max-width: 95%;
-        margin: 1.6rem auto;
+        margin: 0rem auto;
     }
     
     .premium-title {
@@ -1063,7 +1064,7 @@ font-size: 1.2rem;
         width: 10px;
         }
         .premium-img{
-            font-size: 2.8rem;
+            font-size: 2.5rem;
         }
     .single-test{
         transform: translateX(-400px);
