@@ -254,7 +254,7 @@ transform: translate(-50%, -50%);
        text-align :center;
        width :max-content;
        box-shadow :0 0 10px rgba(0,0,0,0.2);
-       z-index: 40;
+       z-index: 99;
 
 }
 
@@ -290,7 +290,6 @@ height: 4rem;
     nav{
         padding-right: 1.7em;
         padding-left: 3em;
-        height: 3.8em;
     }
     .back-btn{
         font-size: 1.2rem;
@@ -363,13 +362,14 @@ height: 4rem;
 
 }
 
+.warning-message{
+        padding :9px;
+        font-size :9px;
+ }
 
 
     
 }@media screen and (max-width: 480px) {
-    nav{
-        height: 3.8em;
-    }
     .nav-title{
         font-size: 1.1rem;
     }
