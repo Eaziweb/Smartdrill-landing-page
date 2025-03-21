@@ -14,6 +14,7 @@
 body{
     font-family: var(--font-primary);
 }
+
 nav{
     position: relative;
 height: 5rem;
@@ -82,6 +83,7 @@ justify-content: space-between;
     bottom: 2em;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 999;
 }
 header{
     padding: 1em 3em;
@@ -113,9 +115,11 @@ header{
     width: 100%;
     padding: 1.5em 3.5em 1.5em 1.5em;
     border-radius: 10px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    cursor: pointer;
     border:  2px solid lightgray;
-
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;   
 }
 
 .course-name{
@@ -126,10 +130,6 @@ header{
     font-size: 1.2rem;
 }
 .course-body{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-    margin-top: 1em;
     display: none;
     height: 0;
 
@@ -137,20 +137,15 @@ header{
 
 input[type= "checkbox"]:checked{
 accent-color: var(--color-secondary);
-animation: bubble .3s;
 
 }
-@keyframes bubble{
-    50%{
-        margin: .2em;
-    }
 
-}
 .course-year{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: relative; 
+    padding-top: .8em;
 
 }
 .course-question-no{
@@ -158,6 +153,8 @@ animation: bubble .3s;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding-top: .8em;
+
 }
 
 .course-topic{
@@ -165,10 +162,13 @@ animation: bubble .3s;
     justify-content: space-between;
     position: relative;
     align-items: center;
+    padding-top: .8em;
+
 }
 .label{
     font-size: 1.2rem;
 }
+
 .label-icon{
     margin-right: .8em;
     color: var(--color-secondary);
@@ -177,13 +177,14 @@ animation: bubble .3s;
 font-size: 1.2rem;
     padding: 10px;
     border-radius: 5px;
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+   
 }
-
+.dropdown-selected:focus{
+background: none;
+}
 .dropdown-options {
     position: absolute;
     top: 0;
@@ -201,9 +202,12 @@ font-size: 1.2rem;
 
 }
 .topic-dropdown{
+    width: 60%;
     position: fixed;
     height: 80%;
-    transform: translate(-50%, 20%);
+    left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
 }
 
 /* Option Style */
@@ -299,7 +303,7 @@ height: 4rem;
         font-size: 12px;
     }
     .search-container {
-        padding: 10px 8px;
+        padding: 10px 4px;
         border-radius: 25px;
     }
     .search-icon {
@@ -307,14 +311,9 @@ height: 4rem;
         margin-right: 5px;
     }
 
-    
-    .section-2{
-        margin-bottom: 3em;
-    
-    }
+
     
     header{
-        padding: .5em 2em;
         text-align: center;
     }
     
@@ -343,16 +342,28 @@ height: 4rem;
     margin-left: .8em;
 }
 .topic-dropdown{
-    font-size: .8rem;
+    font-size: .9rem;
     padding: .6em;
+    width: 70%;
+    height: 75%;
+
+}
+.course-year{
+    padding-top: .5em;
+
+}
+.course-question-no{
+    padding-top: .5em;
 
 }
 
-.warning-message{
-        padding :8px;
-        font-size :10px;
- 
- }
+.course-topic{
+   
+    padding-top: .5em;
+
+}
+
+
 
     
 }@media screen and (max-width: 480px) {
@@ -363,7 +374,7 @@ height: 4rem;
         font-size: 1.1rem;
     }
     .search{
-        width: 110px;
+        width: 105px;
         font-size: 12px;
     }
     .search-icon {
@@ -379,6 +390,15 @@ height: 4rem;
     .start-btn{
         padding: 1em 1.5em;
         font-size: 1rem;
+    }
+    .label{
+        font-size: .8rem;
+    }
+    .dropdown-selected{
+        font-size: .8rem;
+    }
+    .dropdown-options{
+        font-size: .8rem;
     }
     
 }
