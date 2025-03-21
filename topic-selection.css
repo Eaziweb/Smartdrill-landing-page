@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-secondary: darkblue;
+    --color-secondary-2: #0066ff;
+    --color-primary: #ffffff;
+    --font-primary: "Inter", serif;
+    
+}
+body{
+    font-family: var(--font-primary);
+}
+nav{
+    position: relative;
+height: 5rem;
+background-color: var(--color-secondary);
+color: var(--color-primary);
+display: flex;
+align-items: center;
+padding-left: 5em;
+padding-right: 3em;
+justify-content: space-between;
+/* gap: 4em; */
+}
+.back-btn{
+    position: absolute;
+    left: 1em;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+.nav-title{
+    font-size:1.5rem ;
+    font-weight: 500;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    font-size: 18px;
+    color: #888;
+    margin-right: 10px;
+}
+
+.search {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: #333;
+    width: 220px;
+}
+
+/* Placeholder Styling */
+.search::placeholder {
+    color: #aaa;
+    transition: color 0.3s ease-in-out;
+}
+
+   
+.start-btn{
+    position: fixed;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 1em 2em;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header{
+    padding: 1em 3em;
+}
+.header-caption{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+
+
+.section{
+    padding: 3em;
+}
+.section-title{
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+.courses{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+}
+.single-course{
+    background-color: var(--color-primary); 
+    width: 100%;
+    padding: 1.5em 3.5em 1.5em 1.5em;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    border:  2px solid lightgray;
+
+}
+
+.course-name{
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.course-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 1em;
+    display: none;
+    height: 0;
+
+}
+
+input[type= "checkbox"]:checked{
+accent-color: var(--color-secondary);
+animation: bubble .3s;
+
+}
+@keyframes bubble{
+    50%{
+        margin: .2em;
+    }
+
+}
+.course-year{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.course-question-no{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.course-topic{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+.label{
+    font-size: 1.2rem;
+}
+.label-icon{
+    margin-right: .8em;
+    color: var(--color-secondary);
+}
+.dropdown-selected {
+font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 0;
+    right: 2em;
+    width: 50%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 1em;
+font-size: 1.2rem;
+
+}
+.topic-dropdown{
+    position: fixed;
+    height: 80%;
+    transform: translate(-50%, 20%);
+}
+
+/* Option Style */
+.dropdown-options div{
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Hover & Selected Effect */
+.dropdown-options div:hover {
+    background: #4A90E2;
+    color: white;
+}
+
+/* Show Options */
+.dropdown-options.active {
+    display: block;
+}
+
+/* Custom Arrow */
+.dropdown-selected::after {
+    content: "▼";
+    font-size: 12px;
+    color: #333;
+    margin-left: 1.5em;
+}
+
+.section-2{
+    margin-bottom: 5em;
+
+}
+
+.warning-message{
+   position :fixed;
+       background-color :#ff4d4d;
+       color :white;
+       padding :10px;
+       border-radius :5px;
+       font-size :14px;
+       top: 3em;
+       left: 50%;
+       transform: translateX(-50%);
+       text-align :center;
+       width :max-content;
+       box-shadow :0 0 10px rgba(0,0,0,0.2);
+       z-index: 40;
+
+}
+
+/*responsive*/
+
+@media screen and (max-width: 996px) {
+.search{
+    width: 180px;
+}
+.header-caption {
+    font-size: 1.6rem;
+}
+
+}
+@media screen and (max-width: 768px) {
+    .section{
+        padding: 2.5em 2em;
+    }
+ nav{
+height: 4rem;
+ }
+    .search{
+        width: 150px;
+    }
+    header{
+        padding: 1em 2em;
+    }
+    
+}@media screen and (max-width: 576px) {
+    .section{
+        padding: 2em 1.5em;
+    }
+    nav{
+        padding-right: 1.7em;
+        padding-left: 3em;
+        height: 3.8em;
+    }
+    .back-btn{
+        font-size: 1.2rem;
+    }
+    .nav-title {
+        font-size: 1.2rem;
+    }
+    .search{
+        width: 120px;
+        font-size: 12px;
+    }
+    .search-container {
+        padding: 10px 8px;
+        border-radius: 25px;
+    }
+    .search-icon {
+        font-size: 11px;
+        margin-right: 5px;
+    }
+
+    
+    .section-2{
+        margin-bottom: 3em;
+    
+    }
+    
+    header{
+        padding: .5em 2em;
+        text-align: center;
+    }
+    
+.course-name{
+   gap: .8em;
+    font-size: 1rem;
+}
+.single-course{
+   
+    padding: 1.2em;
+
+}
+.label{
+    font-size: 1rem;
+}
+.dropdown-selected{
+    font-size: 1rem;
+    padding: 5px;
+}
+.dropdown-options{
+    font-size: 1rem;
+    padding: .7em;
+}
+.dropdown-selected::after {
+ font-size: 10px;
+    margin-left: .8em;
+}
+.topic-dropdown{
+    font-size: .8rem;
+    padding: .6em;
+
+}
+
+.warning-message{
+        padding :8px;
+        font-size :10px;
+ 
+ }
+
+    
+}@media screen and (max-width: 480px) {
+    nav{
+        height: 3.8em;
+    }
+    .nav-title{
+        font-size: 1.1rem;
+    }
+    .search{
+        width: 110px;
+        font-size: 12px;
+    }
+    .search-icon {
+        font-size: 10px;
+        margin-right: 4px;
+    }
+    .section-title{
+        font-size: 1.2rem;
+    }
+    .course-name{
+        font-size: 1.05rem;
+    }
+    .start-btn{
+        padding: 1em 1.5em;
+        font-size: 1rem;
+    }
+    
+}
